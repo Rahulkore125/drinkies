@@ -80,5 +80,6 @@ class ProductProduct(models.Model):
                                                                    self._context.get('package_id'),
                                                                    self._context.get('from_date'),
                                                                    to_date=to_date)
+	print('abc123')
 
         return res
