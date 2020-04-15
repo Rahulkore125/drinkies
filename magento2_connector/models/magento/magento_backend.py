@@ -996,7 +996,7 @@ class MagentoBackend(models.Model):
 
                                     stock_quant.sudo().write({
                                         'updated_qty': True,
-                                        'original_qty': stock_quant.quantity + e.product_uom_qty * e.product_id.deduct_amount_parent_product
+                                        'original_qty': stock_quant.original_qty + e.product_uom_qty * e.product_id.deduct_amount_parent_product
                                     })
                             products = self.env['product.product'].search([])
                             self.env['product.product'].browse(products.ids)._compute_quantities_dict(
